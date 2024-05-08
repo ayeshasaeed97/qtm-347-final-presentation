@@ -56,11 +56,21 @@ As for the heat map, GenHlth and HighBP seem to have the strongest correlation w
 - Decision Tree Classifier
 - Neural Network: Multi-Layer Perceptron
 
+(add a comment about how the data was split into training and test set) 
+
 ## KNN
 
 
 
 ## LASSO Regression
+
+The pre-processing for the lasso included selcting the predictor variables from the training and test dataset (X_train and X_test), and exluding the first column which is the dependent variable. We then defined a 5-fold cross-validation (kfold) method to select the optimal lasso regularization parameter (alpha). We initialized an ElasticNetCV model (lassoCV) with 100 alphas, L1 ratio of 1 (for Lasso), and the cross-validation method. Next, a pipeline (pipeCV) was created consisting of a StandardScaler and the ElasticNetCV model, and fit it to the training data (X_train_reg, y_train) with only the predictors.  After retrieving the tuned alpha value from the fitted ElasticNetCV model, we initialized a Lasso regression model using the tuned alpha value. All this was done without standardizing the input features, but Lasso puts constraints on the size of the coefficients of the features and that is dependent upon the magnitude of each variable, which makes it necessary. To standardize the variables, we initialized a StandardScaler (scaler) and created a pipeline (pipe) that contains both the scaler and Lasso. Finally, we fit the new pipeline to the training data. 
+
+
+**The top 3 features identified are: GenHlth, BMI, HighBP, with accuracy Score of 0.86** 
+![Screenshot 2024-05-08 at 7 17 52 PM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/5119197a-2716-427f-8a10-faa45d8cc151)
+
+
 
 
 ## Best Subset Selection

@@ -59,7 +59,11 @@ As for the heat map, GenHlth and HighBP seem to have the strongest correlation w
 ## KNN
 To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sklearn.neighbors after splitting our dataset into training and test data. We used cross-validation to find the best n_neighbors value which turned out to be n=12 with an accuracy of 0.858 and a test MSE of 0.1416. However, we also calculated the accuracy score and test MSE for n values ranging from 1-13 to see if other values of n were within 2 standard deviation of the n=12 score. This was, we could get similar predictive power with a lower n. We saw the n=8 and n=10 have very close test MSEs of 0.1430 and 0.1423, respectively.
 
-<img width="488" alt="Screenshot 2024-05-08 at 6 37 16 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/60e51ddd-4317-4b7a-bc4a-6c64f7d57a23">
+
+<img width="541" alt="Screenshot 2024-05-08 at 6 57 56 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/50f0777f-2d51-42b3-9fe9-ca2592908ce6">
+
+
+A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 
 
 ## LASSO Regression
 
@@ -77,7 +81,22 @@ To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sk
 
 
 ## Decision Tree Classifer
+For the decision tree classifier, we changed the Diabetes_binary indicator (indicated 1 for diabetes/pre-diabetes and 0 for no diabetes) as "Yes" and "No", respectively. Afterwards, using DecisionTreeClassifier from sklearn.tree, we fitted our model to our raw data. Using that, we calculated the accuracy score of 0.8624. Next, we did a train-test split and calculated accuracy scores for our decision tree across max_depths ranging from 1 to 10. Both n=5 and n=6 give scores of 0.8636. For the tree, we used a max_depth of n=5 to save on computing time.
 
+<img width="566" alt="Screenshot 2024-05-08 at 6 55 07 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/191710cc-7801-445a-8ce1-c7ea31645d9f">
+
+Below is the pre-pruned decision tree.
+![output dt-pre-pruned](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/9c980c9e-e39d-4b35-aa42-ef8ddd5b3ea2)
+
+While it not easily seen in the decision tree, below you can see that most features give No-No or Yes-Yes for classes. This indicates high node purity which we will attempt to fix by pruning the tree. 
+
+Pruning the tree got rid our problem with node purity because we did get features that showed classification into Yes or No for whether and individual was predicted to have diabetes given the features. We got an improved accuracy score of 0.866, but this was not a large improvement compared to our previous accuracy score of 0.8636. 
+
+<img width="488" alt="Screenshot 2024-05-08 at 6 37 16 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/60e51ddd-4317-4b7a-bc4a-6c64f7d57a23">
+
+<img width="512" alt="Screenshot 2024-05-08 at 7 00 12 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/5d527978-d94e-4038-b790-13807df35593">
+
+A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 
 
 ## Neural Network: Multi-Layer Perceptron
 

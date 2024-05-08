@@ -99,6 +99,7 @@ A note: pruning the decision tree was computationally expensive to run, with it 
 <img width="512" alt="Screenshot 2024-05-08 at 7 00 12 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/5d527978-d94e-4038-b790-13807df35593">
 
 From the decision tree, we see the following are the top 3 most important features in determining whether an individual has diabetes or not: HighBP, GenHlth, and BMI. 
+
 <img width="271" alt="Screenshot 2024-05-08 at 7 04 47 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/8d7b0406-b85a-4462-846e-823c1dac9477">
 
 

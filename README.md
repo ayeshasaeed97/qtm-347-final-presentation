@@ -7,7 +7,7 @@ Using this dataset, we want to answer the following question:
 Which model can most accurately determine the factors (top 3) that predict whether an individual has diabetes or not?
 
 ## Using the dataset
-The dataset can be downloaded using the link below. When downloading the file, there will be 3 datasets. For the purposes of our project, we used the dataset labeled "diabetes_binary_health_indicators_BRFSS2015" because it splits the diabetes outcome variable into a binary outcome with 0 being "does not have diabetes" and 1 being "for prediabetes or diabetes". The dataset does not contain any N/A values, so it does not require extra cleaning.
+The dataset can be downloaded using the link [here](https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset/data). When downloading the file, there will be 3 datasets. For the purposes of our project, we used the dataset labeled "diabetes_binary_health_indicators_BRFSS2015" because it splits the diabetes outcome variable into a binary outcome with 0 being "does not have diabetes" and 1 being "for prediabetes or diabetes". The dataset does not contain any N/A values, so it does not require extra cleaning.
 
 ### Features:
 
@@ -38,6 +38,14 @@ The dataset can be downloaded using the link below. When downloading the file, t
 
 ### Exploratory Data Analysis 
 
+The dataset is cleaned and no outliers were identified that would skew our results. We ran an Ordinary Least squares regression without worrying about confounders just to see the features we're working with and the correlation with the dependent variable, Diabetes Binary. 
+![Screenshot 2024-04-28 at 6 53 04 PM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/d9e0229e-bcea-4bdd-b997-f77b50c5b54e)
+
+From the OLS, HighBP, HighChol, CholCheck and BMI (in that particular order) seem to be the features with the strongest correlation coeeficients. 
+
+![Screenshot 2024-05-08 at 3 53 27 PM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/430f374c-25f4-4360-bf89-4b47a880e6d2)
+
+As for the heat map, GenHlth and HighBP seem to have the strongest correlation with Diabetes Binary. These give us a good point of reference for the other regression models. 
 
 ## Models utilized:
 - K-Nearest Neighbors (KNN)

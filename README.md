@@ -80,3 +80,62 @@ Following that, the neural network model is compiled using the binary cross-entr
 
 Another cross-validation (5-fold) is performed to asses the model performance and generalization ability using an ‘MLPClassifier’ from ‘sklearn.neural_network’, ‘StandardScaler’from ‘sklearn.preprocessing’, and ‘make_pipeline’ from ‘sklearn.pipeline’. For further performance evaluation, an ROC (Receiver Operating Characteristic) curve is used. ROC curves provide a comprehensive view of how well the model can distinguish between two classes. It captures how the model's sensitivity (true positive rate) and specificity (true negative rate) vary with different threshold values. 
 
+### The model summary shows that: 
+
+### Training Set:
+- Accuracy: 86.8%
+- Precision:
+    Class 0 (No diabetes): 88%
+    Class 1 (Diabetes): 61%
+- Recall:
+    Class 0: 99%
+    Class 1: 14%
+- F1-score:
+    Class 0: 93%
+    Class 1: 22%
+- Support:
+    Class 0: 174,732
+    Class 1: 28,212
+
+### Validation Set:
+- Accuracy: 86.4%
+- Precision:
+    Class 0 (No diabetes): 87%
+    Class 1 (Diabetes): 60%
+- Recall:
+    Class 0: 99%
+    Class 1: 13%
+- F1-score:
+    Class 0: 93%
+    Class 1: 21%
+- Support:
+    Class 0: 34,834
+    Class 1: 5,754
+
+###  Test Set:
+- Accuracy: 86.9%
+- Precision:
+    Class 0 (No diabetes): 88%
+    Class 1 (Diabetes): 58%
+- Recall:
+    Class 0: 98%
+    Class 1: 14%
+- F1-score:
+    Class 0: 93%
+    Class 1: 23%
+- Support:
+    Class 0: 8,768
+    Class 1: 1,380
+
+### AUC Score: 0.83
+
+The neural network demonstrates consistent performance across the training, development, and test sets, with accuracies ranging from 86.4% to 86.9%. This indicates that the model generalizes well to unseen data. However, the dataset seems to suffer from class imbalance, as indicated by the discrepancy between precision, recall, and F1-score values for the minority class (Class 1/Diabetes). While the model performs well in identifying the majority class (Class 0/No Diabetes), it struggles with the minority class, particularly in terms of recall.
+
+The precision for the minority class is higher than its recall, suggesting that when the model predicts an instance as positive (Class 1/Diabetes), it is often correct, but it misses many positive instances. This trade-off between precision and recall needs to be considered based on the specific application requirements.
+
+The F1 score balances precision and recall, providing a single metric to evaluate the model's performance. However, it remains lower for the minority class compared to the majority class, indicating the need for further improvement, possibly through techniques like class weighting, oversampling, or adjusting the decision threshold.
+
+An AUC of 0.83 suggests that your model performs significantly better than random guessing. It correctly ranks 83% of randomly chosen positive instances higher than randomly chosen negative instances.
+
+Ultimately, the model performs well in terms of accuracy, it seems to struggle with correctly identifying instances of diabetes (class 1), as indicated by the lower precision, recall, and F1-score for this class compared to class 0. This suggests that the model might benefit from further optimization or additional data preprocessing techniques to improve its performance, especially for the minority class. In this context, the minority class refers to the class with fewer instances or samples compared to the majority class.
+

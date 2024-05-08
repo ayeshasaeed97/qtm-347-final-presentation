@@ -33,12 +33,28 @@ The dataset can be downloaded using the link below. When downloading the file, t
 ### Exploratory Data Analysis 
 
 
-### Models utilized:
+## Models utilized:
 - K-Nearest Neighbors (KNN)
 - LASSO Regression
 - Principal Component Regression (PCR)
+- Decision Tree Classifier
 - Neural Network: Multi-Layer Perceptron
 
+## KNN
 
+
+
+## LASSO Regression
+
+
+
+## Principal Component Regression (PCR)
+
+
+
+## Decision Tree Classifer
+
+
+## Neural Network: Multi-Layer Perceptron
 
   

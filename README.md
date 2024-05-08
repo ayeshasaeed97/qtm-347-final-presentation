@@ -36,6 +36,7 @@ The dataset can be downloaded using the link below. When downloading the file, t
 ## Models utilized:
 - K-Nearest Neighbors (KNN)
 - LASSO Regression
+- Forward Subset Selection
 - Principal Component Regression (PCR)
 - Decision Tree Classifier
 - Neural Network: Multi-Layer Perceptron

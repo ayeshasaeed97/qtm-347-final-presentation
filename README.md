@@ -139,3 +139,5 @@ An AUC of 0.83 suggests that your model performs significantly better than rando
 
 Ultimately, the model performs well in terms of accuracy, it seems to struggle with correctly identifying instances of diabetes (class 1), as indicated by the lower precision, recall, and F1-score for this class compared to class 0. This suggests that the model might benefit from further optimization or additional data preprocessing techniques to improve its performance, especially for the minority class. In this context, the minority class refers to the class with fewer instances or samples compared to the majority class.
 
+Reference Code: https://www.kaggle.com/code/kredy10/simple-neural-network-for-diabetes-prediction
+https://www.kaggle.com/code/kanncaa1/roc-curve-with-k-fold-cv

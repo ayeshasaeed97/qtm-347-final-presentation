@@ -129,6 +129,9 @@ Another cross-validation (5-fold) is performed to asses the model performance an
 
 ### AUC Score: 0.83
 
+![image](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/90111688/c11ecd62-7591-4990-a60e-75b558e56c1b)
+
+
 The neural network demonstrates consistent performance across the training, development, and test sets, with accuracies ranging from 86.4% to 86.9%. This indicates that the model generalizes well to unseen data. However, the dataset seems to suffer from class imbalance, as indicated by the discrepancy between precision, recall, and F1-score values for the minority class (Class 1/Diabetes). While the model performs well in identifying the majority class (Class 0/No Diabetes), it struggles with the minority class, particularly in terms of recall.
 
 The precision for the minority class is higher than its recall, suggesting that when the model predicts an instance as positive (Class 1/Diabetes), it is often correct, but it misses many positive instances. This trade-off between precision and recall needs to be considered based on the specific application requirements.

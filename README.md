@@ -89,16 +89,18 @@ Below is the pre-pruned decision tree.
 
 While it not easily seen in the decision tree, below you can see that most features give No-No or Yes-Yes for classes. This indicates high node purity which we will attempt to fix by pruning the tree. 
 
+<img width="541" alt="Screenshot 2024-05-08 at 6 57 56 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/50f0777f-2d51-42b3-9fe9-ca2592908ce6">
+
 Pruning the tree got rid our problem with node purity because we did get features that showed classification into Yes or No for whether and individual was predicted to have diabetes given the features. We got an improved accuracy score of 0.866, but this was not a large improvement compared to our previous accuracy score of 0.8636. 
+A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 
 
 ![dt post-pruned](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/0340a8e8-a8de-4363-adcc-b7f0c81a8db0)
 
-<img width="541" alt="Screenshot 2024-05-08 at 6 57 56 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/50f0777f-2d51-42b3-9fe9-ca2592908ce6">
-
-
 <img width="512" alt="Screenshot 2024-05-08 at 7 00 12 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/5d527978-d94e-4038-b790-13807df35593">
 
-A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 
+From the decision tree, we see the following are the top 3 most important features in determining whether an individual has diabetes or not: HighBP, GenHlth, and BMI. 
+<img width="271" alt="Screenshot 2024-05-08 at 7 04 47 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/8d7b0406-b85a-4462-846e-823c1dac9477">
+
 
 ## Neural Network: Multi-Layer Perceptron
 

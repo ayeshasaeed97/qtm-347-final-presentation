@@ -59,7 +59,7 @@ As for the heat map, GenHlth and HighBP seem to have the strongest correlation w
 ## KNN
 To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sklearn.neighbors after splitting our dataset into training and test data. We used cross-validation to find the best n_neighbors value which turned out to be n=12 with an accuracy of 0.858 and a test MSE of 0.1416. However, we also calculated the accuracy score and test MSE for n values ranging from 1-13 to see if other values of n were within 2 standard deviation of the n=12 score. This was, we could get similar predictive power with a lower n. We saw the n=8 and n=10 have very close test MSEs of 0.1430 and 0.1423, respectively.
 
-
+![Screenshot 2024-05-08 at 6.37.16 PM](/Users/ayeshasaeed/Desktop/Screenshots/Screenshot 2024-05-08 at 6.37.16 PM.png)]
 
 
 ## LASSO Regression

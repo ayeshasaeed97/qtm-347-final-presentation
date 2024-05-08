@@ -59,8 +59,7 @@ As for the heat map, GenHlth and HighBP seem to have the strongest correlation w
 ## KNN
 To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sklearn.neighbors after splitting our dataset into training and test data. We used cross-validation to find the best n_neighbors value which turned out to be n=12 with an accuracy of 0.858 and a test MSE of 0.1416. However, we also calculated the accuracy score and test MSE for n values ranging from 1-13 to see if other values of n were within 2 standard deviation of the n=12 score. This was, we could get similar predictive power with a lower n. We saw the n=8 and n=10 have very close test MSEs of 0.1430 and 0.1423, respectively.
 
-
-<img width="541" alt="Screenshot 2024-05-08 at 6 57 56 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/50f0777f-2d51-42b3-9fe9-ca2592908ce6">
+<img width="488" alt="Screenshot 2024-05-08 at 6 37 16 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/60e51ddd-4317-4b7a-bc4a-6c64f7d57a23">
 
 
 A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 
@@ -92,8 +91,7 @@ While it not easily seen in the decision tree, below you can see that most featu
 
 Pruning the tree got rid our problem with node purity because we did get features that showed classification into Yes or No for whether and individual was predicted to have diabetes given the features. We got an improved accuracy score of 0.866, but this was not a large improvement compared to our previous accuracy score of 0.8636. 
 
-<img width="488" alt="Screenshot 2024-05-08 at 6 37 16 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/60e51ddd-4317-4b7a-bc4a-6c64f7d57a23">
-
+<img width="541" alt="Screenshot 2024-05-08 at 6 57 56 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/50f0777f-2d51-42b3-9fe9-ca2592908ce6">
 <img width="512" alt="Screenshot 2024-05-08 at 7 00 12 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/5d527978-d94e-4038-b790-13807df35593">
 
 A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 

@@ -209,5 +209,7 @@ So we can see that decision tree and neural network had the highest accuracy sco
 
 However, when we look at the computational cost of running these models, especially on a large scale, they may not be the best options. Pruning the decision tree alone took almost 30 minutes. The similar accuracy score indicates PCR performed similarly to decision tree and neural network. It is a simpler model to run, but possibly less intuitive for people without a quantitative background. The key with the decision tree would be to take the model and create an application that allows individuals to put in their test scores for the various features we highlighted in our analysis (blood pressure, BMI, general health rating).
 
+Another thing to note  from our results is that models known for penalizing features, such as Lasso, and those effective at dimensionality reduction, like PCA, didn't perform as well as expected. We speculate this could be attributed to the unique nature of our health dataset. Given the intricacies of health data, where each feature may hold some degree of significance, it becomes challenging for penalization methods to effectively discard features.
 
+In conclusion, if we were to only look at accuracy scores, we would pick the neural network, but as discussed more factors should be considered even if accuracy scores provide a good metric for comparison. We see factors like comutation cost and ease of interpretability playing a huge factor in our results and recommendations. This project showed us sometimes there is beauty in simplicity! 
 

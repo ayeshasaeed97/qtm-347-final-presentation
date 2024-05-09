@@ -199,9 +199,14 @@ Table of results
 | Model | Accuracy Score   |
 | ----- | ---------------- |
 | KNN |         0.85842    |
-| Lasso |      0.85842     |
-| PCR |      0.85842       |
+| Lasso |      0.85974     |
+| PCR |      0.86246       |
 | Decision Tree | 0.86645  |
 | Neural Network | 0.869   |
+
+So we can see that decision tree and neural network had the highest accuracy scores of 0.86645 and 0.869, respectively. Intuitively, decision tree is the best model for answering our question because it closely mimics human decision making. It is similar to how a healthcare provider would run tests and look at results to determine whether a patient has diabetes. It is also a model we could scale-up into an actually effective tool for individuals and healthcare providers to keep track of their own health. 
+
+However, when we look at the computational cost of running these models, especially on a large scale, they may not be the best options. Pruning the decision tree alone took almost 30 minutes. The similar accuracy score indicates PCR performed similarly to decision tree and neural network. It is a simpler model to run, but possibly less intuitive for people without a quantitative background. The key with the decision tree would be to take the model and create an application that allows individuals to put in their test scores for the various features we highlighted in our analysis (blood pressure, BMI, general health rating).
+
 
 

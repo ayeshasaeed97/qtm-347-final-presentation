@@ -191,3 +191,7 @@ Ultimately, the model performs well in terms of accuracy, it seems to struggle w
 
 Reference Code: https://www.kaggle.com/code/kredy10/simple-neural-network-for-diabetes-prediction
 https://www.kaggle.com/code/kanncaa1/roc-curve-with-k-fold-cv
+
+## Conclusion
+
+

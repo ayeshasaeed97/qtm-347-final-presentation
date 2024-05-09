@@ -64,8 +64,6 @@ To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sk
 <img width="488" alt="Screenshot 2024-05-08 at 6 37 16 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/60e51ddd-4317-4b7a-bc4a-6c64f7d57a23">
 
 
-A note: pruning the decision tree was computationally expensive to run, with it taking about 26 minutes to run. 
-
 ## LASSO Regression
 
 The pre-processing for the lasso included selcting the predictor variables from the training and test dataset (X_train and X_test), and exluding the first column which is the dependent variable. We then defined a 5-fold cross-validation (kfold) method to select the optimal lasso regularization parameter (alpha). We initialized an ElasticNetCV model (lassoCV) with 100 alphas, L1 ratio of 1 (for Lasso), and the cross-validation method. Next, a pipeline (pipeCV) was created consisting of a StandardScaler and the ElasticNetCV model, and fit it to the training data (X_train_reg, y_train) with only the predictors.  After retrieving the tuned alpha value from the fitted ElasticNetCV model, we initialized a Lasso regression model using the tuned alpha value. All this was done without standardizing the input features, but Lasso puts constraints on the size of the coefficients of the features and that is dependent upon the magnitude of each variable, which makes it necessary. To standardize the variables, we initialized a StandardScaler (scaler) and created a pipeline (pipe) that contains both the scaler and Lasso. Finally, we fit the new pipeline to the training data. 
@@ -193,5 +191,9 @@ Reference Code: https://www.kaggle.com/code/kredy10/simple-neural-network-for-di
 https://www.kaggle.com/code/kanncaa1/roc-curve-with-k-fold-cv
 
 ## Conclusion
+
+Table of results
+
+| Model | Accuracy Score |
 
 

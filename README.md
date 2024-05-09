@@ -197,6 +197,7 @@ https://www.kaggle.com/code/kanncaa1/roc-curve-with-k-fold-cv
 Table of results
 
 | Model | Accuracy Score |
+| ----- | -------------- |
 | KNN | 0.85842 |
 
 

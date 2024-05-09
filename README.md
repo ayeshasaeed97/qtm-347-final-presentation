@@ -63,7 +63,7 @@ To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sk
 
 <img width="417" alt="Screenshot 2024-05-08 at 9 28 29 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/faa797fa-fc5f-41e8-90ee-66d3771ea94e">
 
-<img width="519" alt="Screenshot 2024-05-08 at 8 34 58 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/5e708aea-cd0f-4ff0-8d7b-ba7ccae4b95a">
+<img width="417" alt="Screenshot 2024-05-08 at 8 34 58 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/5e708aea-cd0f-4ff0-8d7b-ba7ccae4b95a">
 
 ## LASSO Regression
 

@@ -201,7 +201,7 @@ Table of results
 | KNN |         0.85842    |
 | Lasso |      0.85842     |
 | PCR |      0.85842       |
-| Decision Tree | 0.85842  |
-| Neural Network | 0.85842 |
+| Decision Tree | 0.86645  |
+| Neural Network | 0.869   |
 
 

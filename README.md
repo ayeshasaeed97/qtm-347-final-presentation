@@ -70,23 +70,25 @@ To run our k-Nearest Neigbors classification, we used KNeighborRegressor from sk
 The pre-processing for the lasso included selcting the predictor variables from the training and test dataset (X_train and X_test), and exluding the first column which is the dependent variable. We then defined a 5-fold cross-validation (kfold) method to select the optimal lasso regularization parameter (alpha). We initialized an ElasticNetCV model (lassoCV) with 100 alphas, L1 ratio of 1 (for Lasso), and the cross-validation method. Next, a pipeline (pipeCV) was created consisting of a StandardScaler and the ElasticNetCV model, and fit it to the training data (X_train_reg, y_train) with only the predictors.  After retrieving the tuned alpha value from the fitted ElasticNetCV model, we initialized a Lasso regression model using the tuned alpha value. All this was done without standardizing the input features, but Lasso puts constraints on the size of the coefficients of the features and that is dependent upon the magnitude of each variable, which makes it necessary. To standardize the variables, we initialized a StandardScaler (scaler) and created a pipeline (pipe) that contains both the scaler and Lasso. Finally, we fit the new pipeline to the training data. 
 
 
-**The top 3 features identified are: GenHlth, BMI, HighBP, with accuracy Score of 0.86** 
+**The top 3 features identified are: GenHlth, BMI, HighBP, with accuracy Score of 0.85974** 
 
 ![Screenshot 2024-05-08 at 7 21 09 PM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/00f2c6a3-a82a-4c24-b55b-13c700afcded)
 
 The coefficients represent the effect of each predictor variable on the target variable in the Lasso regression model. Positive coefficients indicate a positive relationship with the target variable, while negative coefficients indicate a negative relationship. GenHlth, BMI, HighBP, and HighChol have the largest positive coefficients, suggesting that individuals with higher general health ratings, higher BMI, and those with high blood pressure or high cholesterol are more likely to have the target outcome. Regarding the fact that the Lasso regression did not shrink any coefficients to zero, it suggests that all predictors included in the model contribute at least some predictive power for the target variable. This can be interpreted as indicating that each of these predictors contains valuable information for predicting the outcome. However, it's important to note that this lack of shrinkage to zero may also imply that the model is complex and potentially overfitting the data. 
 
 
-## Best Subset Selection
-
-
-
-## Forward Selection
-
-
 
 ## Principal Component Regression (PCR)
 
+
+A PCA model with 20 components is initiated from the skl.decomposition package along with a logistic regression model. We chose a logistic regression model because our target variable is a binary making this a classification model which would make a logistic regression superior over a linear one. A pipeline is created with PCA and logistic regression models and then trained on the training data (X_train and y_train) using the fit method. The PCA transforms the data. Using the named_steps attribute we accessed the coefficients of the logistic regression model. Just like Lasso, this is done without scaling, but scaling this always a good idea because PCA picks components based on variance and enerally the predictors have to be measurements of comparable quantities for interpretation to be possible. 
+
+Another pipeline is created, this time incorporating standard scaling before PCA and logistic regression. This is done using the StandardScaler and LogisticRegression components within the Pipeline constructor. We performed a Cross-validation grid search to find the optimal number of components by transforming the predictors using a model specification (MS), which was **17**. This was a lot higher than we had hoped. We accessed the coefficients of the logistic regression model. We extracted the explained variance ratio of the PCA model to understand how much variance is explained by each component. 
+
+![Screenshot 2024-04-29 at 10 31 26 AM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/e829cec9-11b2-44f4-a8fc-4964ef686659)
+
+
+PCR had an accuracy score of 0.862 and even though the optimal number of components is 17 as can be seen from the table above after the 11th component, the explained varaine ratio doesn't increase by a significant amount as the cross-validated MSE stays withing 2SEs. So for ease of interpretability, picking the model with 11 components might be better
 
 
 ## Decision Tree Classifer

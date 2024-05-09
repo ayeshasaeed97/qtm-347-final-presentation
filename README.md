@@ -112,6 +112,9 @@ From the decision tree, we see the following are the top 3 most important featur
 
 <img width="271" alt="Screenshot 2024-05-08 at 7 04 47 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/8d7b0406-b85a-4462-846e-823c1dac9477">
 
+Producing a confusion table allows us to see the misclassification or Type I and Type II errors. Looking at the table, the model makes a lot of false negative predictions. This could be caused by the dataset not having an even amount of observation for each outcome (1 or 0).
+<img width="195" alt="Screenshot 2024-05-08 at 8 08 46 PM" src="https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/98335777/0288b858-f1fa-44ab-aab8-9e20d43e9b20">
+
 
 ## Neural Network: Multi-Layer Perceptron
 

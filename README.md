@@ -72,9 +72,10 @@ The pre-processing for the lasso included selcting the predictor variables from 
 
 
 **The top 3 features identified are: GenHlth, BMI, HighBP, with accuracy Score of 0.86** 
-![Screenshot 2024-05-08 at 7 17 52 PM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/5119197a-2716-427f-8a10-faa45d8cc151)
 
+![Screenshot 2024-05-08 at 7 21 09 PM](https://github.com/ayeshasaeed97/qtm-347-final-presentation/assets/122938409/00f2c6a3-a82a-4c24-b55b-13c700afcded)
 
+The coefficients represent the effect of each predictor variable on the target variable in the Lasso regression model. Positive coefficients indicate a positive relationship with the target variable, while negative coefficients indicate a negative relationship. GenHlth, BMI, HighBP, and HighChol have the largest positive coefficients, suggesting that individuals with higher general health ratings, higher BMI, and those with high blood pressure or high cholesterol are more likely to have the target outcome. Regarding the fact that the Lasso regression did not shrink any coefficients to zero, it suggests that all predictors included in the model contribute at least some predictive power for the target variable. This can be interpreted as indicating that each of these predictors contains valuable information for predicting the outcome. However, it's important to note that this lack of shrinkage to zero may also imply that the model is complex and potentially overfitting the data. 
 
 
 ## Best Subset Selection

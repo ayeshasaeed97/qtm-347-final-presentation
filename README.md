@@ -196,8 +196,12 @@ https://www.kaggle.com/code/kanncaa1/roc-curve-with-k-fold-cv
 
 Table of results
 
-| Model | Accuracy Score |
-| ----- | -------------- |
-| KNN | 0.85842 |
+| Model | Accuracy Score   |
+| ----- | ---------------- |
+| KNN |         0.85842    |
+| Lasso |      0.85842     |
+| PCR |      0.85842       |
+| Decision Tree | 0.85842  |
+| Neural Network | 0.85842 |
 
 
